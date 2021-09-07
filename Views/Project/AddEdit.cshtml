@@ -39,7 +39,7 @@
 
         <label for="ddlProjectType">ProjectType</label>
         <select class="form-control" id="ddlProjectType" name="ddlProjectType">
-            <option value='' >Select Project Type</option>
+            <option value=''>Select Project Type</option>
 
         </select>
 
@@ -316,52 +316,56 @@
         }
         //
             //function will be called on button click having id btnsave
-        @*$(function () {
-        $("#btnSave").click(function () {
-             $.ajax(
-                    {
-                        type: "POST", //HTTP POST Method
-                        url: "/Practice/AddProjectDetail",
-                        data: {
-                            Id : $("#hdnProjectId").val(),
-                            CustomerName: $("#txtCustomerName").val(),
-                            ProjectName: $("#txtProjectName").val(),
-                            ProjectId: $("#txtProjectId").val(),
-                            StartDate: $("#txtStartDate").val(),
-                            EndDate: $("#txtEndDate").val(),
-                            ProjectStatus: $("#ddlProjectStatus").val(),
-                            LocationGroup: $("#ddlLocationGroup").val(),
-                            PayRollState: $("#ddlPayRollState").val(),
-                            SalesPerson: $("#ddlSalesPerson").val(),
-                            ProjectCategory: $("#ddlProjectCategory").val(),
-                            ProjectType: $("#ddlProjectType").val(),
-                            EngagementType: $("#ddlEngagementType").val(),
-                            TimesheetRepNames: $("#ddlTimesheetRepNames").val(),
-                            SubDomain: $("#ddlSubDomain").val(),
-                            ClientInvGrp: $("#ddlClientInvGrp").val(),
-                            TimesheetTypes: $("#ddlTimesheetTypes").val(),
-                            IsVmsSheet: $("input[type=radio][name=rdIsVmsSheet]:checked").val(),
-                            PracticeType: $("#ddlPracticeType").val(),
-                            RecruiterNames: $("#ddlRecruiter").val()
 
-                        },
-                        dataType: "json",
-                        success: function (response) {
-                            alert("Success");
-                           // window.location.reload();
-                        }
-                    });
-            return false;
+
+
+        $(function () {
+            $("#btnSave").click(function () {
+                if (ValidateForm()) {
+                    $.ajax(
+                        {
+                            type: "POST", //HTTP POST Method
+                            url: "/Practice/AddProjectDetail",
+                            data: {
+                                Id: $("#hdnProjectId").val(),
+                                CustomerName: $("#txtCustomerName").val(),
+                                ProjectName: $("#txtProjectName").val(),
+                                ProjectId: $("#txtProjectId").val(),
+                                StartDate: $("#txtStartDate").val(),
+                                EndDate: $("#txtEndDate").val(),
+                                ProjectStatus: $("#ddlProjectStatus").val(),
+                                LocationGroup: $("#ddlLocationGroup").val(),
+                                PayRollState: $("#ddlPayRollState").val(),
+                                SalesPerson: $("#ddlSalesPerson").val(),
+                                ProjectCategory: $("#ddlProjectCategory").val(),
+                                ProjectType: $("#ddlProjectType").val(),
+                                EngagementType: $("#ddlEngagementType").val(),
+                                TimesheetRepNames: $("#ddlTimesheetRepNames").val(),
+                                SubDomain: $("#ddlSubDomain").val(),
+                                ClientInvGrp: $("#ddlClientInvGrp").val(),
+                                TimesheetTypes: $("#ddlTimesheetTypes").val(),
+                                IsVmsSheet: $("input[type=radio][name=rdIsVmsSheet]:checked").val(),
+                                PracticeType: $("#ddlPracticeType").val(),
+                                RecruiterNames: $("#ddlRecruiter").val()
+
+                            },
+                            dataType: "json",
+                            success: function (response) {
+                                alert("Success");
+                                // window.location.reload();
+                            }
+                        });
+                    return false;
+                }
         });
-        });*@
+        });
 
-        $('#btnSave').click(function () {
-            debugger;
+        function ValidateForm() {
             var Name;
             var ProjectName;
             var ProjectId;
             var check;
-
+            var flag = true;
 
             $(".error").remove();
             Name = $("#txtCustomerName").val();
@@ -378,78 +382,84 @@
             PrjEngagement = $("#ddlEngagementType").val();
             PrjClient = $("#ddlClientInvGrp").val();
 
-
- 
-            console.log(Name);
               if (Name == '') {
-                    $("#txtCustomerName").after('<span class="error">This field is required</span>');
+                  $("#txtCustomerName").after('<span class="error">This field is required</span>');
+                  flag = false;
 
             }
 
             if (ProjectName == '') {
                 $("#txtProjectName").after('<span class="error">This field is required</span>');
+                flag = false;
 
             }
 
             if (ProjectId == '') {
                 $("#txtProjectId").after('<span class="error">This field is required</span>');
+                flag = false;
 
             }
             if (PrjType == '') {
                 $("#ddlProjectType").after('<span class="error">Project Type is required</span>');
 
+                flag = false;
 
 
             }
 
             if (PrjCat == '') {
                 $("#ddlProjectCategory").after('<span class="error">Project Category is required</span>');
+                flag = false;
 
             }
             if (PrjStatus == '') {
                 $("#ddlProjectStatus").after('<span class="error">Project Status is required</span>');
+                flag = false;
 
             }
             if (PrjLoc == '') {
                 $("#ddlLocationGroup").after('<span class="error">Location Group is required</span>');
+                flag = false;
 
             }
             if (PrjState == '') {
                 $("#ddlPayRollState").after('<span class="error">PayRoll State is required</span>');
+                flag = false;
 
             }
             if (PrjSales == '') {
                 $("#ddlSalesPerson").after('<span class="error">Sales Person is required</span>');
+                flag = false;
 
             }
             if (PrjPractice == '') {
                 $("#ddlPracticeType").after('<span class="error">Practice Type is required</span>');
-
+                flag = false;
             }
             if (PrjRecruiter == '') {
                 $("#ddlRecruiter").after('<span class="error">Recruiter is mandatory</span>');
 
-            }
+                 flag = false; }
 
             if (PrjEngagement == '') {
                 $("#ddlEngagementType").after('<span class="error">Engagement Type is mandatory</span>');
 
-            }
+                 flag = false; }
             if (PrjClient == '') {
                 $("#ddlClientInvGrp").after('<span class="error">Client Invoice is Required</span>');
 
-            }
+                 flag = false; }
 
             if ($('input[type=radio][name=rdIsVmsSheet]:checked').length == 0) {
                 $("#vmsRadio").after('<span class="error">Please select Radio Button </span>');
+                 flag = false; }
+
+
+
+          return flag;
+
+
             }
-
-
-
-          return true;
-
-
-            })
 
 
 
