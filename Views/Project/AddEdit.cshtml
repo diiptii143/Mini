@@ -1,0 +1,460 @@
+﻿@{
+    ViewBag.Title = "AddEdit";
+}
+
+<h2>Add/Edit Project Details </h2>
+
+<form id="PrjAddEdit" name="PrjAddEdit">
+    <div class="form-group col-md-12">
+        <label for="txtCustomerName">Employee Name</label>
+        <input class="form-control" id="txtCustomerName" name="txtCustomerName" type="text" value="" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="txtProjectName">Project Name</label>
+        <input class="form-control" id="txtProjectName" name="txtProjectName" type="text" value="" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="txtProjectId">ProjectId</label>
+        <input class="form-control" id="txtProjectId" name="txtProjectId" type="text" value="" />
+
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="txtStartDate">start Date</label>
+        <br />
+        <input data-val="true" data-val-date="The field start Date must be a date." data-val-required="The start Date field is required." id="txtStartDate" name="txtStartDate" type="date" value="" />
+
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="txtEndDate">End Date</label>
+        <br />
+        <input data-val="true" data-val-date="The field End Date must be a date." data-val-required="The End Date field is required." id="txtEndDate" name="txtEndDate" type="date" value="" />
+
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlProjectType">ProjectType</label>
+        <select class="form-control" id="ddlProjectType" name="ddlProjectType">
+            <option value='' >Select Project Type</option>
+
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlSubDomain">SubDomain</label>
+        <select class="form-control" data-val="true" data-val-number="The field SubDomain must be a number." data-val-required="The SubDomain field is required." id="ddlSubDomain" name="ddlSubDomain">
+            <option value=''>Select SubDomain</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlProjectCategory">ProjectCategory</label>
+        <select class="form-control" data-val="true" data-val-number="The field ProjectCategory must be a number." data-val-required="The ProjectCategory field is required." id="ddlProjectCategory" name="ddlProjectCategory">
+            <option value=''>Select Project Category</option>
+
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlProjectStatus">ProjectStatus</label>
+        <select class="form-control" data-val="true" data-val-number="The field ProjectStatus must be a number." data-val-required="The ProjectStatus field is required." id="ddlProjectStatus" name="ddlProjectStatus">
+            <option value=''>Select Project Status</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlLocationGroup">LocationGroup</label>
+        <select class="form-control" data-val="true" data-val-number="The field LocationGroup must be a number." data-val-required="The LocationGroup field is required." id="ddlLocationGroup" name="ddlLocationGroup">
+            <option value=''>Select Location Group</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlPayRollState">PayRollState</label>
+        <select class="form-control" id="ddlPayRollState" name="ddlPayRollState">
+            <option value=''>Select Payroll state</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlSalesPerson">SalesPerson</label>
+        <select class="form-control" data-val="true" data-val-number="The field SalesPerson must be a number." data-val-required="The SalesPerson field is required." id="ddlSalesPerson" name="ddlSalesPerson">
+            <option value="">Select Sales Person</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlEngagementType">EngagementType</label>
+        <select class="form-control" data-val="true" data-val-number="The field EngagementType must be a number." data-val-required="The EngagementType field is required." id="ddlEngagementType" name="ddlEngagementType">
+            <option value=''>Select Engagement Type</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlTimesheetRepNames">TimesheetRepNames</label>
+        <select class="form-control" data-val="true" data-val-number="The field TimesheetRepNames must be a number." data-val-required="The TimesheetRepNames field is required." id="ddlTimesheetRepNames" name="ddlTimesheetRepNames">
+            <option value=''>Select TimeSheet Representative</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlClientInvGrp">Client Invoice group</label>
+        <select class="form-control" data-val="true" data-val-number="The field ClientInvGrp must be a number." data-val-required="The ClientInvGrp field is required." id="ddlClientInvGrp" name="ddlClientInvGrp">
+            <option value=''>Select Invoice Group</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlTimesheetTypes">Timesheet Type</label>
+        <select class="form-control" id="ddlTimesheetTypes" name="ddlTimesheetTypes">
+            <option value=''>Select TimeSheet Types</option>
+        </select>
+
+    </div>
+
+    <div class="form-group col-md-6">
+
+        <label for="ddlPracticeType">Practice Type</label>
+        <select class="form-control" id="ddlPracticeType" name="ddlPracticeType">
+            <option value=''>Select Practice Type</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlRecruiter">Recruiter</label>
+        <select class="form-control" id="ddlRecruiter" name="ddlRecruiter">
+            <option value=''>Select Recruiter</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+        <label for="rdVMS" id="vmsRadio">IsVmsSheet</label>
+        <br />
+        <input id="rdIsVmsSheetYes" name="rdIsVmsSheet" type="radio" value="1" />Yes            <br />
+        <input id="rdIsVmsSheetNo" name="rdIsVmsSheet" type="radio" value="2" />No            <br />
+    </div>
+
+    <div class="form-group  col-lg-offset-5">
+
+        <button class="btn btn-primary" type="button" name="save" id="btnSave">Save</button>
+    </div>
+    <input type="hidden" id="hdnProjectId" value="@ViewData["ProjectId"]" />
+</form>
+@section scripts{
+
+    @*<script src="~/Scripts/jquery-3.4.1.js" type="text/javascript"></script>
+        <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+          $(document).ready(function () {
+            let ProjectType = 4650,
+                ProjectCategory = 19491,
+                EngagementType = 15700,
+                ClientInvoiceGroup = 10300,
+                TimesheetType = 13120,
+                PracticeType = 15760,
+                projectStatus = 1800
+            $.when(
+                bindAppRefList(ddlProjectType, ProjectType),
+                bindAppRefList(ddlProjectCategory, ProjectCategory),
+                bindAppRefList(ddlProjectStatus, projectStatus),
+                bindAppRefList(ddlEngagementType, EngagementType),
+                bindAppRefList(ddlClientInvGrp, ClientInvoiceGroup),
+                bindAppRefList(ddlTimesheetTypes, TimesheetType),
+                bindAppRefList(ddlPracticeType, PracticeType),
+                bindRecSalespersonList(ddlSalesPerson),
+                bindRecSalespersonList(ddlRecruiter),
+                bindTimesheetRepList(ddlTimesheetRepNames),
+                bindGroupList(ddlLocationGroup),
+                bindStateList(ddlPayRollState),
+            ).done(function () {
+                if (parseInt($("#hdnProjectId").val()) > 0) {
+                    getProjectData();
+                                    }
+            });
+
+              $("#ddlProjectType").on("change", function () {
+                bindAppRefChildList(ddlSubDomain, $("#ddlProjectType").val());
+            });
+        });
+
+        function bindAppRefChildList(ctrl, parentId) {
+           return  $.ajax({
+                method: "GET",
+                url: "/Master/GetAppRefChildData?parentId=" + parentId,
+                success: function (response) {
+                    $(ctrl).empty();
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+                error: function () { return false; }
+            });
+        }
+        function bindAppRefList(ctrl, parentId) {
+           return $.ajax({
+                method: "GET",
+                url: "/Master/GetAppRefData?parentId=" + parentId,
+                success: function (response) {
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+               error: function () {
+                   return false;
+               }
+            });
+        }
+        function bindRecSalespersonList(ctrl) {
+           return  $.ajax({
+                method: "GET",
+                url: "/Master/GetRecruiterSalePerson",
+                success: function (response) {
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+                error: function () { return false; }
+            });
+        }
+        function bindTimesheetRepList(ctrl) {
+           return  $.ajax({
+                method: "GET",
+                url: "/Master/GetTimesheetRep",
+                success: function (response) {
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+                error: function () { return false; }
+            });
+        }
+        function bindGroupList(ctrl) {
+           return  $.ajax({
+                method: "GET",
+                url: "/Master/GetLocationGroups",
+                success: function (response) {
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+                error: function () { return false; }
+            });
+        }
+        function bindStateList(ctrl) {
+           return  $.ajax({
+                method: "GET",
+                url: "/Master/GetPayrollState",
+                success: function (response) {
+                    console.log('state', response);
+                    $.each(response, function () {
+                        $(ctrl).append($("<option></option>").val(this.Value).html(this.Text));
+                    });
+                },
+                error: function () { return false; }
+            });
+        }
+
+        function getProjectData() {
+            $.ajax({
+                method: "GET",
+                url: "/Practice/GetProject?id=" + $("#hdnProjectId").val(),
+                success: function (response) {
+                    console.log(response);
+                    $("#ddlProjectType").val(response.ProjectType);
+                    $("#ddlProjectCategory").val(response.ProjectCategory);
+                    $("#ddlProjectStatus").val(response.ProjectStatus);
+                    $("#ddlEngagementType").val(response.EngagementType);
+                    $("#ddlClientInvGrp").val(response.ClientInvGrp);
+                    $("#ddlTimesheetTypes").val(response.TimesheetTypes);
+                    $("#ddlPracticeType").val(response.PracticeType);
+                    $("#ddlSalesPerson").val(response.SalesPerson);
+                    $("#ddlRecruiter").val(response.RecruiterNames);
+                    $("#ddlTimesheetRepNames").val(response.TimesheetRepNames);
+                    $("#ddlLocationGroup").val(response.LocationGroup);
+                    $("#ddlSubDomain").val(response.SubDomain);
+                    $("#ddlPayRollState").val(response.PayRollState);
+                    $("#ddlPayRollState").val(response.PayRollState);
+                    $("#txtCustomerName").val(response.CustomerName);
+                    $("#txtProjectName").val(response.ProjectName);
+                    $("#txtProjectId").val(response.ProjectId);
+                    if (response.IsVmsSheet == 1) {
+                        $("#rdIsVmsSheetYes").prop("checked", true);
+                    } else if (response.IsVmsSheet == 2) {
+                        $("#rdIsVmsSheetNo").prop("checked", true);
+                    }
+
+                    let d = new Date(response.StartDate.toString());
+                    $("#txtStartDate").val(d.getFullYear()
+                        + '-' + (d.getMonth()+1 > 9 ? d.getMonth()+1 : '0' + (d.getMonth()+1).toString())
+                        + '-' + (d.getDate() > 9 ? d.getDate() : '0' + d.getDate().toString()));
+
+                    let ed = new Date(response.EndDate.toString());
+
+                    $("#txtEndDate").val(ed.getFullYear()
+                        + '-' + (ed.getMonth()+1 > 9 ? ed.getMonth()+1 : '0' + (ed.getMonth()+1).toString())
+                        + '-' + (ed.getDate() > 9 ? ed.getDate() : '0' + ed.getDate().toString()));
+                },
+                error: function () { return false; }
+            });
+        }
+        //
+            //function will be called on button click having id btnsave
+        @*$(function () {
+        $("#btnSave").click(function () {
+             $.ajax(
+                    {
+                        type: "POST", //HTTP POST Method
+                        url: "/Practice/AddProjectDetail",
+                        data: {
+                            Id : $("#hdnProjectId").val(),
+                            CustomerName: $("#txtCustomerName").val(),
+                            ProjectName: $("#txtProjectName").val(),
+                            ProjectId: $("#txtProjectId").val(),
+                            StartDate: $("#txtStartDate").val(),
+                            EndDate: $("#txtEndDate").val(),
+                            ProjectStatus: $("#ddlProjectStatus").val(),
+                            LocationGroup: $("#ddlLocationGroup").val(),
+                            PayRollState: $("#ddlPayRollState").val(),
+                            SalesPerson: $("#ddlSalesPerson").val(),
+                            ProjectCategory: $("#ddlProjectCategory").val(),
+                            ProjectType: $("#ddlProjectType").val(),
+                            EngagementType: $("#ddlEngagementType").val(),
+                            TimesheetRepNames: $("#ddlTimesheetRepNames").val(),
+                            SubDomain: $("#ddlSubDomain").val(),
+                            ClientInvGrp: $("#ddlClientInvGrp").val(),
+                            TimesheetTypes: $("#ddlTimesheetTypes").val(),
+                            IsVmsSheet: $("input[type=radio][name=rdIsVmsSheet]:checked").val(),
+                            PracticeType: $("#ddlPracticeType").val(),
+                            RecruiterNames: $("#ddlRecruiter").val()
+
+                        },
+                        dataType: "json",
+                        success: function (response) {
+                            alert("Success");
+                           // window.location.reload();
+                        }
+                    });
+            return false;
+        });
+        });*@
+
+        $('#btnSave').click(function () {
+            debugger;
+            var Name;
+            var ProjectName;
+            var ProjectId;
+            var check;
+
+
+            $(".error").remove();
+            Name = $("#txtCustomerName").val();
+            ProjectName = $("#txtProjectName").val();
+            ProjectId = $("#txtProjectId").val();
+            PrjType = $("#ddlProjectType").val();
+            PrjCat = $("#ddlProjectCategory").val();
+            PrjStatus = $("#ddlProjectStatus").val();
+            PrjLoc = $("#ddlLocationGroup").val();
+            PrjState = $("#ddlPayRollState").val();
+            PrjSales = $("#ddlSalesPerson").val();
+            PrjPractice = $("#ddlPracticeType").val();
+            PrjRecruiter = $("#ddlRecruiter").val();
+            PrjEngagement = $("#ddlEngagementType").val();
+            PrjClient = $("#ddlClientInvGrp").val();
+
+
+ 
+            console.log(Name);
+              if (Name == '') {
+                    $("#txtCustomerName").after('<span class="error">This field is required</span>');
+
+            }
+
+            if (ProjectName == '') {
+                $("#txtProjectName").after('<span class="error">This field is required</span>');
+
+            }
+
+            if (ProjectId == '') {
+                $("#txtProjectId").after('<span class="error">This field is required</span>');
+
+            }
+            if (PrjType == '') {
+                $("#ddlProjectType").after('<span class="error">Project Type is required</span>');
+
+
+
+            }
+
+            if (PrjCat == '') {
+                $("#ddlProjectCategory").after('<span class="error">Project Category is required</span>');
+
+            }
+            if (PrjStatus == '') {
+                $("#ddlProjectStatus").after('<span class="error">Project Status is required</span>');
+
+            }
+            if (PrjLoc == '') {
+                $("#ddlLocationGroup").after('<span class="error">Location Group is required</span>');
+
+            }
+            if (PrjState == '') {
+                $("#ddlPayRollState").after('<span class="error">PayRoll State is required</span>');
+
+            }
+            if (PrjSales == '') {
+                $("#ddlSalesPerson").after('<span class="error">Sales Person is required</span>');
+
+            }
+            if (PrjPractice == '') {
+                $("#ddlPracticeType").after('<span class="error">Practice Type is required</span>');
+
+            }
+            if (PrjRecruiter == '') {
+                $("#ddlRecruiter").after('<span class="error">Recruiter is mandatory</span>');
+
+            }
+
+            if (PrjEngagement == '') {
+                $("#ddlEngagementType").after('<span class="error">Engagement Type is mandatory</span>');
+
+            }
+            if (PrjClient == '') {
+                $("#ddlClientInvGrp").after('<span class="error">Client Invoice is Required</span>');
+
+            }
+
+            if ($('input[type=radio][name=rdIsVmsSheet]:checked').length == 0) {
+                $("#vmsRadio").after('<span class="error">Please select Radio Button </span>');
+            }
+
+
+
+          return true;
+
+
+            })
+
+
+
+
+
+    </script>
+
+}
