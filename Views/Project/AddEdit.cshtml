@@ -288,18 +288,21 @@
                     $("#ddlRecruiter").val(response.RecruiterNames);
                     $("#ddlTimesheetRepNames").val(response.TimesheetRepNames);
                     $("#ddlLocationGroup").val(response.LocationGroup);
-                    $("#ddlSubDomain").val(response.SubDomain);
+                    //$("#ddlSubDomain") 
                     $("#ddlPayRollState").val(response.PayRollState);
                     $("#ddlPayRollState").val(response.PayRollState);
                     $("#txtCustomerName").val(response.CustomerName);
                     $("#txtProjectName").val(response.ProjectName);
                     $("#txtProjectId").val(response.ProjectId);
+
+                    //radiobutton binding
                     if (response.IsVmsSheet == 1) {
                         $("#rdIsVmsSheetYes").prop("checked", true);
                     } else if (response.IsVmsSheet == 2) {
                         $("#rdIsVmsSheetNo").prop("checked", true);
                     }
 
+                    //date binding 
                     let d = new Date(response.StartDate.toString());
                     $("#txtStartDate").val(d.getFullYear()
                         + '-' + (d.getMonth()+1 > 9 ? d.getMonth()+1 : '0' + (d.getMonth()+1).toString())
