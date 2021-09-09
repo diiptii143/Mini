@@ -276,7 +276,7 @@
                 method: "GET",
                 url: "/Practice/GetProject?id=" + $("#hdnProjectId").val(),
                 success: function (response) {
-                    console.log(response);
+                    //console.log(response);
                     $("#ddlProjectType").val(response.ProjectType);
                     $("#ddlProjectCategory").val(response.ProjectCategory);
                     $("#ddlProjectStatus").val(response.ProjectStatus);
@@ -288,12 +288,15 @@
                     $("#ddlRecruiter").val(response.RecruiterNames);
                     $("#ddlTimesheetRepNames").val(response.TimesheetRepNames);
                     $("#ddlLocationGroup").val(response.LocationGroup);
-                    //$("#ddlSubDomain") 
-                    $("#ddlPayRollState").val(response.PayRollState);
                     $("#ddlPayRollState").val(response.PayRollState);
                     $("#txtCustomerName").val(response.CustomerName);
                     $("#txtProjectName").val(response.ProjectName);
                     $("#txtProjectId").val(response.ProjectId);
+ 
+                 
+                    $('#ddlProjectType')
+                        .val(response.SubDomain).trigger('change');
+ 
 
                     //radiobutton binding
                     if (response.IsVmsSheet == 1) {
