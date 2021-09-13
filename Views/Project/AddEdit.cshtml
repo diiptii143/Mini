@@ -3,6 +3,7 @@
 }
 
 <h2>Add/Edit Project Details </h2>
+<br />
 
 <form id="PrjAddEdit" name="PrjAddEdit">
     <div class="form-group col-md-12">
@@ -11,7 +12,7 @@
     </div>
 
     <div class="form-group col-md-6">
-        <label for="txtProjectName">Project Name</label>
+        <label for="txtProjectName">Project Name</label> <span class="requiredsymbl">* </span>
         <input class="form-control" id="txtProjectName" name="txtProjectName" type="text" value="" />
     </div>
 
@@ -22,7 +23,7 @@
     </div>
 
     <div class="form-group col-md-6">
-        <label for="txtStartDate">start Date</label>
+        <label for="txtStartDate">Start Date   </label> <span class="requiredsymbl">* </span>
         <br />
         <input data-val="true" data-val-date="The field start Date must be a date." data-val-required="The start Date field is required." id="txtStartDate" name="txtStartDate" type="date" value="" />
 
@@ -37,7 +38,7 @@
     </div>
     <div class="form-group col-md-6">
 
-        <label for="ddlProjectType">ProjectType</label>
+        <label for="ddlProjectType">ProjectType</label> <span class="requiredsymbl">* </span>
         <select class="form-control" id="ddlProjectType" name="ddlProjectType">
             <option value=''>Select Project Type</option>
 
@@ -46,7 +47,7 @@
     </div>
     <div class="form-group col-md-6">
 
-        <label for="ddlSubDomain">SubDomain</label>
+        <label for="ddlSubDomain">SubDomain</label> <span class="requiredsymbl">* </span>
         <select class="form-control" data-val="true" data-val-number="The field SubDomain must be a number." data-val-required="The SubDomain field is required." id="ddlSubDomain" name="ddlSubDomain">
             <option value=''>Select SubDomain</option>
         </select>
@@ -54,7 +55,7 @@
     </div>
     <div class="form-group col-md-6">
 
-        <label for="ddlProjectCategory">ProjectCategory</label>
+        <label for="ddlProjectCategory">ProjectCategory</label> <span class="requiredsymbl">* </span>
         <select class="form-control" data-val="true" data-val-number="The field ProjectCategory must be a number." data-val-required="The ProjectCategory field is required." id="ddlProjectCategory" name="ddlProjectCategory">
             <option value=''>Select Project Category</option>
 
@@ -71,7 +72,7 @@
     </div>
     <div class="form-group col-md-6">
 
-        <label for="ddlLocationGroup">LocationGroup</label>
+        <label for="ddlLocationGroup">LocationGroup</label> <span class="requiredsymbl">* </span>
         <select class="form-control" data-val="true" data-val-number="The field LocationGroup must be a number." data-val-required="The LocationGroup field is required." id="ddlLocationGroup" name="ddlLocationGroup">
             <option value=''>Select Location Group</option>
         </select>
@@ -79,49 +80,9 @@
     </div>
     <div class="form-group col-md-6">
 
-        <label for="ddlPayRollState">PayRollState</label>
+        <label for="ddlPayRollState">PayRollState</label> <span class="requiredsymbl">* </span>
         <select class="form-control" id="ddlPayRollState" name="ddlPayRollState">
             <option value=''>Select Payroll state</option>
-        </select>
-
-    </div>
-    <div class="form-group col-md-6">
-
-        <label for="ddlSalesPerson">SalesPerson</label>
-        <select class="form-control" data-val="true" data-val-number="The field SalesPerson must be a number." data-val-required="The SalesPerson field is required." id="ddlSalesPerson" name="ddlSalesPerson">
-            <option value="">Select Sales Person</option>
-        </select>
-
-    </div>
-    <div class="form-group col-md-6">
-
-        <label for="ddlEngagementType">EngagementType</label>
-        <select class="form-control" data-val="true" data-val-number="The field EngagementType must be a number." data-val-required="The EngagementType field is required." id="ddlEngagementType" name="ddlEngagementType">
-            <option value=''>Select Engagement Type</option>
-        </select>
-
-    </div>
-    <div class="form-group col-md-6">
-
-        <label for="ddlTimesheetRepNames">TimesheetRepNames</label>
-        <select class="form-control" data-val="true" data-val-number="The field TimesheetRepNames must be a number." data-val-required="The TimesheetRepNames field is required." id="ddlTimesheetRepNames" name="ddlTimesheetRepNames">
-            <option value=''>Select TimeSheet Representative</option>
-        </select>
-
-    </div>
-    <div class="form-group col-md-6">
-
-        <label for="ddlClientInvGrp">Client Invoice group</label>
-        <select class="form-control" data-val="true" data-val-number="The field ClientInvGrp must be a number." data-val-required="The ClientInvGrp field is required." id="ddlClientInvGrp" name="ddlClientInvGrp">
-            <option value=''>Select Invoice Group</option>
-        </select>
-
-    </div>
-    <div class="form-group col-md-6">
-
-        <label for="ddlTimesheetTypes">Timesheet Type</label>
-        <select class="form-control" id="ddlTimesheetTypes" name="ddlTimesheetTypes">
-            <option value=''>Select TimeSheet Types</option>
         </select>
 
     </div>
@@ -134,25 +95,69 @@
         </select>
 
     </div>
+
     <div class="form-group col-md-6">
 
-        <label for="ddlRecruiter">Recruiter</label>
+        <label for="ddlEngagementType">EngagementType</label>
+        <select class="form-control" data-val="true" data-val-number="The field EngagementType must be a number." data-val-required="The EngagementType field is required." id="ddlEngagementType" name="ddlEngagementType">
+            <option value=''>Select Engagement Type</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlTimesheetRepNames">TimesheetRepNames</label> <span class="requiredsymbl">* </span>
+        <select class="form-control" data-val="true" data-val-number="The field TimesheetRepNames must be a number." data-val-required="The TimesheetRepNames field is required." id="ddlTimesheetRepNames" name="ddlTimesheetRepNames">
+            <option value=''>Select TimeSheet Representative</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlClientInvGrp">Client Invoice group</label> <span class="requiredsymbl">* </span>
+        <select class="form-control" data-val="true" data-val-number="The field ClientInvGrp must be a number." data-val-required="The ClientInvGrp field is required." id="ddlClientInvGrp" name="ddlClientInvGrp">
+            <option value=''>Select Invoice Group</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlTimesheetTypes">Timesheet Type</label> <span class="requiredsymbl">* </span>
+        <select class="form-control" id="ddlTimesheetTypes" name="ddlTimesheetTypes">
+            <option value=''>Select TimeSheet Types</option>
+        </select>
+
+    </div>
+
+    <div class="form-group col-md-6">
+
+        <label for="ddlSalesPerson">Sales Person</label> <span class="requiredsymbl">* </span>
+        <select class="form-control" data-val="true" data-val-number="The field SalesPerson must be a number." data-val-required="The SalesPerson field is required." id="ddlSalesPerson" name="ddlSalesPerson">
+            <option value="">Select Sales Person</option>
+        </select>
+
+    </div>
+    <div class="form-group col-md-6">
+
+        <label for="ddlRecruiter">Recruiter</label> <span class="requiredsymbl">* </span>
         <select class="form-control" id="ddlRecruiter" name="ddlRecruiter">
             <option value=''>Select Recruiter</option>
         </select>
 
     </div>
     <div class="form-group col-md-6">
-        <label for="rdVMS" id="vmsRadio">IsVmsSheet</label>
+        <label for="rdVMS" id="vmsRadio">IsVmsSheet :</label>
         <br />
-        <input id="rdIsVmsSheetYes" name="rdIsVmsSheet" type="radio" value="1" />Yes            <br />
-        <input id="rdIsVmsSheetNo" name="rdIsVmsSheet" type="radio" value="2" />No            <br />
+        <input id="rdIsVmsSheetYes" name="rdIsVmsSheet" type="radio" value="1" />Yes
+        <input id="rdIsVmsSheetNo" name="rdIsVmsSheet" type="radio" value="2" />No
     </div>
 
-    <div class="form-group  col-lg-offset-5">
 
-        <button class="btn btn-primary" type="button" name="save" id="btnSave">Save</button>
+    <div class="form-group  col-lg-offset-4">
+
+        <button class="btn btn-primary" type="button" name="save" id="btnSave">Submit</button>
     </div>
+
     <input type="hidden" id="hdnProjectId" value="@ViewData["ProjectId"]" />
 </form>
 @section scripts{
@@ -292,11 +297,11 @@
                     $("#txtCustomerName").val(response.CustomerName);
                     $("#txtProjectName").val(response.ProjectName);
                     $("#txtProjectId").val(response.ProjectId);
- 
-                 
+
+
                     $('#ddlProjectType')
                         .val(response.SubDomain).trigger('change');
- 
+
 
                     //radiobutton binding
                     if (response.IsVmsSheet == 1) {
@@ -305,7 +310,7 @@
                         $("#rdIsVmsSheetNo").prop("checked", true);
                     }
 
-                    //date binding 
+                    //date binding
                     let d = new Date(response.StartDate.toString());
                     $("#txtStartDate").val(d.getFullYear()
                         + '-' + (d.getMonth()+1 > 9 ? d.getMonth()+1 : '0' + (d.getMonth()+1).toString())
@@ -370,7 +375,7 @@
             var Name;
             var ProjectName;
             var ProjectId;
-            var check;
+  
             var flag = true;
 
             $(".error").remove();
@@ -379,14 +384,15 @@
             ProjectId = $("#txtProjectId").val();
             PrjType = $("#ddlProjectType").val();
             PrjCat = $("#ddlProjectCategory").val();
-            PrjStatus = $("#ddlProjectStatus").val();
+           PrjStatus = $("#ddlProjectStatus").val();
             PrjLoc = $("#ddlLocationGroup").val();
             PrjState = $("#ddlPayRollState").val();
             PrjSales = $("#ddlSalesPerson").val();
-            PrjPractice = $("#ddlPracticeType").val();
+            PrjSubDomain = $("#ddlSubDomain").val();
             PrjRecruiter = $("#ddlRecruiter").val();
-            PrjEngagement = $("#ddlEngagementType").val();
+            PrjTimesheetRep = $("#ddlTimesheetRepNames").val();
             PrjClient = $("#ddlClientInvGrp").val();
+            PrjTimesheetType = $("#ddlTimesheetTypes").val();
 
               if (Name == '') {
                   $("#txtCustomerName").after('<span class="error">This field is required</span>');
@@ -438,27 +444,35 @@
                 flag = false;
 
             }
-            if (PrjPractice == '') {
-                $("#ddlPracticeType").after('<span class="error">Practice Type is required</span>');
+            if (PrjSubDomain == '') {
+                $("#ddlSubDomain").after('<span class="error">SubDomain is required</span>');
                 flag = false;
             }
             if (PrjRecruiter == '') {
-                $("#ddlRecruiter").after('<span class="error">Recruiter is mandatory</span>');
+                $("#ddlRecruiter" ).after('<span class="error">Recruiter is mandatory</span>');
 
                  flag = false; }
 
-            if (PrjEngagement == '') {
-                $("#ddlEngagementType").after('<span class="error">Engagement Type is mandatory</span>');
+            if (PrjTimesheetRep == '') {
+                $("#ddlTimesheetRepNames").after('<span class="error">This Field is required</span>');
 
-                 flag = false; }
+                flag = false;
+            }
+
+            if (PrjTimesheetType == '') {
+                $("#ddlTimesheetTypes").after('<span class="error">This Field is required</span>');
+
+                flag = false;
+            }
+
             if (PrjClient == '') {
                 $("#ddlClientInvGrp").after('<span class="error">Client Invoice is Required</span>');
 
                  flag = false; }
 
-            if ($('input[type=radio][name=rdIsVmsSheet]:checked').length == 0) {
+            @*if ($('input[type=radio][name=rdIsVmsSheet]:checked').length == 0) {
                 $("#vmsRadio").after('<span class="error">Please select Radio Button </span>');
-                 flag = false; }
+                 flag = false; }*@
 
 
 

@@ -16,6 +16,7 @@
     white-space: normal;
 }
 
+ 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -42,7 +43,9 @@ input, select, textarea {
 }
 .error {
     color: red;
-    margin-left: 5px;
+   margin-left:3px;
+    font-size:smaller;
+
 }
 
 td {
@@ -56,4 +59,9 @@ th{
     padding:10px;
 
 }
+
+.requiredsymbl{
+    color:red;
+    font-weight:600;
  
+}
