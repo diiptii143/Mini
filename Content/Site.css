@@ -32,7 +32,7 @@ input[type=checkbox] {
 }
 
 button {
-    margin-left: 16px;
+    margin: 16px;
 }
 
 input, select, textarea {
@@ -44,3 +44,16 @@ input, select, textarea {
     color: red;
     margin-left: 5px;
 }
+
+td {
+    padding: 8px;
+    text-align: center;
+ 
+    border: 1px solid black;
+}
+
+th{
+    padding:10px;
+
+}
+ 
