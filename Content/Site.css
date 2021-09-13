@@ -65,3 +65,11 @@ th{
     font-weight:600;
  
 }
+
+
+.btn-primary {
+ 
+    float: right;
+    margin-bottom:12px;
+ 
+}
